@@ -11,7 +11,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 const client = new ApolloClient({
-  uri: https://customer-food-app.onrender.com/',
+  uri: 'https://customer-food-app.onrender.com/',
   cache: new InMemoryCache(),
 })
 
