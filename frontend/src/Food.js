@@ -181,15 +181,15 @@ const Food = ({ setIsLogIn }) => {
   })
 
   const filteredItems = data.getFoodItems.filter((item) =>
-    item.name.toLowerCase().includes(searchQuery.toLowerCase())
+    item?.name?.toLowerCase().includes(searchQuery?.toLowerCase())
   )
 
   const filteredCustomers = orderData.getOrderDetails.filter((item) =>
-    item.user.toLowerCase().includes(customerSearch.toLowerCase()) || item.name.toLowerCase().includes(customerSearch.toLowerCase())
+    item?.user?.toLowerCase().includes(customerSearch?.toLowerCase()) || item?.name.toLowerCase()?.includes(customerSearch?.toLowerCase())
   )
 
   const myOrderDetails = orderData.getOrderDetails.filter((item) =>
-    item.user === user
+    item?.user === user
   )
   const handleSearchInputChange = (event) => {
     setSearchQuery(event.target.value)
